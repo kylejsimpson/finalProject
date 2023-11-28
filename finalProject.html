@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WEB-115 Final Project</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="projectJS.js"></script>
+</head>
+<body>
+    <div class="banner">
+        <h1>Build Your Meal Plan</h1>
+        <p>Kyle - Course: WEB-115, Section: 0006</p>
+    </div>
+
+    <form id="mealPlanForm">
+        <!-- Personal Information -->
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="goal">Goal for the Week:</label><br>
+        <textarea id="goal" name="goal"></textarea><br>
+
+        <!-- Meal Plan Inputs -->
+        <div class="meal-plan">
+            ${generateMealInputs()}
+        </div>
+
+        <button type="button" onclick="generateMealPlan()">Generate Meal Plan</button>
+    </form>
+
+    <button onclick="clearPlanner()">Clear Planner</button>
+    <button onclick="printPlanner()">Print/Download Planner</button>
+</body>
+</html>
