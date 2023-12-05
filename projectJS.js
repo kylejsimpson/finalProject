@@ -1,4 +1,3 @@
-alert("Script loaded!");
 function generateMealPlan() {
     var email = document.getElementById('email').value;
     if (validateEmail(email)) {
