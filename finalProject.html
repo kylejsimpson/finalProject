@@ -2,10 +2,9 @@
 <html>
 <head>
     <title>WEB-115 Final Project</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="projectJS.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body>
+<body onload="generateMealInputs()">
     <div class="banner">
         <h1>Build Your Meal Plan</h1>
         <p>Kyle - Course: WEB-115, Section: 0006</p>
@@ -23,14 +22,13 @@
         <textarea id="goal" name="goal"></textarea><br>
 
         <!-- Meal Plan Inputs -->
-        <div class="meal-plan">
-            ${generateMealInputs()}
-        </div>
+        <div class="meal-plan" id="mealInputs"></div>
 
         <button type="button" onclick="generateMealPlan()">Generate Meal Plan</button>
     </form>
 
     <button onclick="clearPlanner()">Clear Planner</button>
     <button onclick="printPlanner()">Print/Download Planner</button>
+	<script src="projectJS.js"></script>
 </body>
 </html>
